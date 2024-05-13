@@ -159,7 +159,7 @@ section {
   align-items: center;
   position: relative;
 }
-.header-content .left-header .h-shape {
+.h-shape {
   transition: all 0.4s ease-in-out;
   width: 65%;
   height: 100%;
@@ -170,6 +170,19 @@ section {
   z-index: -1;
   clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
 }
+
+.h-shape-min {
+  transition: all 0.4s ease-in-out;
+  width: 25%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+}
+
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
   height: 85%;
@@ -277,7 +290,7 @@ section {
 
 .about-stats .stats-item {
   margin: 0 auto 15px;
-  min-width: 400px;
+  min-width: 350px;
   transition: all 0.4s ease-in-out;
   padding: 30px 30px 10px;
   border-radius: 5px;
@@ -503,44 +516,49 @@ section {
 }
 
 .contact-content-con {
-  display: flex;
   padding-top: 3.5rem;
 }
-.contact-content-con .left-contact {
-  flex: 2;
+.contact-content-con .contact {
+  text-align: center;
+  max-width: 800px;
+  margin: 5rem auto;
 }
-.contact-content-con .left-contact h4 {
+.contact-content-con .contact-item h4 {
   margin-top: 1rem;
   font-size: 2rem;
   text-transform: uppercase;
 }
-.contact-content-con .left-contact p {
-  margin: 1rem 0;
-  line-height: 2rem;
+
+.contact-content-con .contact-item .option {
+  margin: 3rem 0;
 }
-.contact-content-con .left-contact .contact-info .contact-item {
+
+.contact-content-con .contact-item .info {
+  font-size: 20px;
+  color: var(--color-grey-2);
+
+  margin-top: 1rem;
+}
+
+.contact-content-con .contact-item .number {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 8px 15px;
+  border: 1px solid var(--color-grey-5);
+  border-radius: 50%;
+}
+
+.contact-content-con .contact-item .email {
+  color: var(--color-secondary);
+  cursor: pointer;
+  font-style: italic  ;
+}
+
+.contact-content-con .contact-icon {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
-.contact-content-con .left-contact .contact-info .contact-item p {
-  margin: 0.3rem 0 !important;
-  padding: 0 !important;
-}
-.contact-content-con .left-contact .contact-info .contact-item .icon {
-  display: grid;
-  grid-template-columns: 40px 1fr;
-}
-.contact-content-con .left-contact .contact-info .contact-item .icon i {
-  display: flex;
-  align-items: center;
-  font-size: 1.3rem;
-}
-.contact-content-con .left-contact .contact-icon {
-  display: flex;
-  margin-top: 2rem;
-}
-.contact-content-con .left-contact .contact-icon a {
+
+.contact-content-con .contact-icon a {
   display: flex;
   align-items: center;
   color: var(--color-white);
@@ -591,9 +609,9 @@ section {
 .contact-content-con .right-contact .i-c-2 :last-child {
   margin-left: 1.5rem;
 }
-.contact-content-con .right-contact .submit-btn {
+.contact-content-con .submit-btn {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 
 /*Independed components*/
