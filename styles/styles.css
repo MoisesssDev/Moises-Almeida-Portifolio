@@ -36,6 +36,11 @@
   --color-grey-6: #12181b;
 }
 
+.text-secondary {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
 body {
   background-color: var(--color-primary);
   font-family: "Poppins", sans-serif;
